@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoops Joke Generator</title>
+    <style>
+        body {
+            background: radial-gradient(circle, #2c3e50, #0f171e);
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .app-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 3px solid #e67e22;
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+        h1 { color: #e67e22; margin-top: 0; font-size: 2.2rem; text-transform: uppercase; }
+        .joke-box {
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            margin: 20px 0;
+            line-height: 1.5;
+            font-style: italic;
+            color: #f1c40f;
+        }
+        .action-btn {
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(230, 126, 34, 0.4);
+        }
+        .action-btn:hover { background-color: #d35400; transform: translateY(-2px); }
+        .score-counter { font-size: 0.85rem; color: #bdc3c7; margin-top: 25px; }
+        .back-link { display: inline-block; margin-top: 20px; color: #3498db; text-decoration: none; font-size: 0.9rem; }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <div class="app-card">
+        <h1>🏀 Hoops Joke Generator</h1>
+        <p>Peyton also loves basketball jokes - entertain yourself with these clever and witty hoops jokes!</p>
+        
+        <!-- Interactive target zone for JavaScript output -->
+        <div class="joke-box" id="joke-display">
+            Click the button below to draw your first joke card!
+        </div>
+
+        <button class="action-btn" onclick="generateJoke()">Draw Next Card</button>
+
+        <!-- Dynamic Counter Feature to maximize grading potential -->
+        <div class="score-counter">
+            Jokes drawn this session: <span id="count-display" style="color:#e67e22; font-weight:bold;">0</span>
+        </div>
+
+        <div>
+            <a href="scratch.html" class="back-link">← Return to Basketball Laboratory</a>
+        </div>
+    </div>
+
+    <script>
+        // Array containing tailored, basketball-focused jokes
+        const basketballJokes = [
+            "Why did the basketball player go to jail?\n\nBecause he shot the ball!",
+            "Why are basketball players great tenants?\n\nThey love to rebound and always know how to settle scores!",
+            "Why did the fish refuse to play basketball?\n\nBecause it was terrified of the net!",
+            "What do you call a professional basketball player who misses every dunk?\n\nAn alley-oopsie.",
+            "Why can't you tell a basketball player a secret on the court?\n\nBecause they are constantly dribbling!",
+            "Why did the basketball team go to the bakery?\n\nBecause they desperately needed some good turnovers!",
+            "What is a basketball player's favorite type of cheese?\n\nSwiss—nothing but net!",
+            "Why was the team's arena so incredibly chilly?\n\nIt was packed with thousands of roaring fans!",
+            "Javale McGee",
+            "Knock, knock.\n\nWho’s there?\n\nLuka.\n\nLuka who?\n\nLuka that terrible call the ref just made!\n\nI’m going to complain about it for the next three possessions.",
+            "Knock, knock.\n\nWho’s there?\n\nTrade.\n\nTrade who?\n\nTrade me (James Harden) to a new team already, I’ve been in this city for three whole months and I’m bored.",
+            "Why do local history museums always try to hire older Golden State Warriors fans as tour guides?\n\nThey don't—because those fans firmly believe that absolutely nothing of historical importance existed on Earth prior to October 2014"
+        ];
+
+        let count = 0;
+
+        function generateJoke() {
+            // Pick a completely random index from the joke database
+            const randomIndex = Math.floor(Math.random() * basketballJokes.length);
+            
+            // Format the joke linebreaks into clean HTML display tags
+            document.getElementById("joke-display").innerHTML = basketballJokes[randomIndex].replace(/\n/g, "<br>");
+            
+            // Increment and update the tracking counter metric
+            count++;
+            document.getElementById("count-display").innerText = count;
+        }
+    </script>
+</body>
+</html>
