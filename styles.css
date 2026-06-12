@@ -1,0 +1,76 @@
+/* 1. Custom Global Color Background and Font-Family definitions */
+body {
+    background-color: #1a252f; /* Deep dark court-side background theme color */
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Explicit Font Family */
+    color: #f5f6fa; /* Explicit Font Color */
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* 2. Div Layout Positioning Definition (Block 1: Main Container Wrapper) */
+.main-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #2c3e50; /* Distinct contrasting background slate */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 3. Div Layout Positioning Definition (Block 2: Header Styling Block) */
+.header-block {
+    text-align: center;
+    border-bottom: 3px solid #e67e22; /* Classic Basketball Orange Accent lines */
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+/* 4. Div Layout Positioning Definition (Block 3: Content Container Block) */
+.content-block {
+    padding: 10px;
+    background-color: #34495e;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* Style Definition 4: Custom Heading Font Colors and Elements */
+h1, h2, h3 {
+    color: #e67e22; /* Basketball Orange */
+    font-family: 'BioRhyme', serif;/* Punchy Sports-Themed Font Choice */
+}
+
+/* Supplemental presentation styling elements to guarantee aesthetic cleanliness */
+.nav-btn {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav-btn:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+.jump-link {
+    color: #2ecc71;
+    text-decoration: underline;
+}
+.hobby-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid #e67e22;
+    margin: 15px 0;
+}
+.video-container, .tableau-wrapper {
+    margin: 25px 0;
+    border: 2px solid #e67e22;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #000;
+}
+.target-divider {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px dashed #e67e22;
+}
+.center-text { text-align: center; }
